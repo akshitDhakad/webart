@@ -5,10 +5,11 @@
 body {
   min-width: 376px;
   min-height: 100vh;
-  box-sizing: border-box;
-  padding: 0px;
-  margin: 0px;
-  scroll-behavior: smooth;
+  box-sizing: border-box !important;
+  padding: 0px !important;
+  margin: 0px !important;
+  scroll-behavior: smooth !important;
+  overflow-x: hidden !important;
 }
 
 @layer utilities {
