@@ -123,6 +123,7 @@ function Footer() {
           </div>
         </div>
       </div>
+      <hr className="max-w-6xl m-auto" />
       {/* Lower Navbar  */}
       <div className="max-w-6xl m-auto py-10">
         <div className="flex justify-between items-center">

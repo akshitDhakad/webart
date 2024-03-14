@@ -1,10 +1,18 @@
 import Layout from "./components/layout.js";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
-import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa6";
+import {
+  FaFacebook,
+  FaLinkedin,
+  FaInstagram,
+  FaArrowUpRightFromSquare,
+} from "react-icons/fa6";
 import Testinomial from "./components/testinomial.js";
 import FlipCard from "./components/flipCard.js";
 import Carousel from "./components/carousel.js";
 import ClientCard from "./components/clientCard.js";
+// React icons
+import { IoMdKey } from "react-icons/io";
+import Link from "next/link.js";
 
 export default function Home() {
   const backgroundImg = {
@@ -15,47 +23,49 @@ export default function Home() {
   };
 
   return (
-    <div className="relative">
+    <main className="relative">
       <Layout>
         {/* Hero Section  */}
-        <div className="abosolute top-0 h-screen flex bg-theme-bg-dark">
-          <div className="relative max-w-6xl m-auto px-10 py-5">
-            <div
-              className="absolute top-0 left-0 h-full w-2/5"
-              style={backgroundImg}
-            ></div>
-            <div className="absolute top-0 left-0 h-full w-2/5 inset-0 bg-purple-100 bg-opacity-10 backdrop-blur-md"></div>
-            <div className="grid grid-cols-2 gap-x-20 gap-y-10 max-w-4xl m-auto">
-              <div className="col-span-2 flex flex-col gap-5">
-                <div>
-                  <h2 className="text-3xl text-white font-semibold tracking-wide font-theme-font">
-                    Custom Web
-                  </h2>
+        <section>
+          <div className="abosolute top-0 h-screen flex bg-theme-bg-dark">
+            <div className="relative max-w-6xl m-auto px-10 py-5">
+              <div
+                className="absolute top-0 left-0 h-full w-2/5"
+                style={backgroundImg}
+              ></div>
+              <div className="absolute top-0 left-0 h-full w-2/5 inset-0 bg-purple-100 bg-opacity-10 backdrop-blur-md"></div>
+              <div className="grid grid-cols-2 gap-x-20 gap-y-10 max-w-4xl m-auto">
+                <div className="col-span-2 flex flex-col gap-5">
+                  <div>
+                    <h2 className="text-3xl text-white font-semibold tracking-wide font-theme-font">
+                      Custom Web
+                    </h2>
+                  </div>
+                  <div>
+                    <h1 className="text-6xl text-white font-bold tracking-wide font-theme-font">
+                      Application Development
+                    </h1>
+                  </div>
                 </div>
+                <div></div>
                 <div>
-                  <h1 className="text-6xl text-white font-bold tracking-wide font-theme-font">
-                    Application Development
-                  </h1>
-                </div>
-              </div>
-              <div></div>
-              <div>
-                <p className="text-white text-start tracking-wide font-theme-font">
-                  Looking for turnkey custom web application development
-                  services? We are Devox Software – a leading custom web
-                  application development company with a recognized stand on the
-                  market and a proven track record of completed projects.
-                </p>
-                <div className="flex items-center gap-x-3 mt-5">
-                  <span className="text-white">Let'talk</span>
-                  <button className="p-3 font-theme-font text-sm bg-purple-600 text-white rounded-full hover:bg-white hover:text-purple-600 hover:shadow-md hover:shadow-slate-200 transition-color delay-250">
-                    <HiOutlineArrowLongRight className="text-lg" />
-                  </button>
+                  <p className="text-white text-start tracking-wide font-theme-font">
+                    Looking for turnkey custom web application development
+                    services? We are Devox Software – a leading custom web
+                    application development company with a recognized stand on
+                    the market and a proven track record of completed projects.
+                  </p>
+                  <div className="flex items-center gap-x-3 mt-5">
+                    <span className="text-white">Let'talk</span>
+                    <button className="p-3 font-theme-font text-sm bg-purple-600 text-white rounded-full hover:bg-white hover:text-purple-600 hover:shadow-md hover:shadow-slate-200 transition-color delay-250">
+                      <HiOutlineArrowLongRight className="text-lg" />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
         {/* Pages Section  */}
         <section>
           <div className="relative max-w-6xl py-20 grid grid-cols-2 gap-x-10 gap-y-10  m-auto">
@@ -788,7 +798,157 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Our Work Section  */}
+        <section>
+          <div className="relative max-w-6xl py-20 grid grid-cols-2 gap-2  m-auto">
+            <span class="absolute font-semibold text-[12rem] font-theme-font leading-none opacity-10 top-[-25px] left-[-125px] text-gray-500">
+              Latest Works
+            </span>
+            {/* heading  */}
+            <div className="col-span-2 flex flex-col ">
+              <div className="mb-2">
+                <h2 className="text-4xl text-gray-600 font-bold tracking-wide font-theme-font">
+                  Case Studies
+                </h2>
+              </div>
+              <div className="mb-4">
+                <h1 className="text-5xl text-black font-bold tracking-wide font-theme-font">
+                  OurLatest Works
+                </h1>
+              </div>
+            </div>
+            {/* project 1  */}
+            <div className="col-span-2 grid grid-cols-2 gap-2">
+              {/* left content */}
+              <div className="h-96 relative rounded-2xl overflow-hidden">
+                <div className="absolute inset-0 bg-gray-100 opacity-0 hover:opacity-80 flex justify-center items-center">
+                  <Link
+                    href={""}
+                    class="text-lg font-semibold flex items-center gap-x-2"
+                  >
+                    <span className="text-xl">Click Here</span>
+                    <span>
+                      <FaArrowUpRightFromSquare />
+                    </span>
+                  </Link>
+                </div>
+                <img
+                  className="h-full w-full object-cover object-center"
+                  src="https://devoxsoftware.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2024/02/philip-oroni-MyY188YX0vU-unsplash.jpg.webp"
+                  alt=""
+                />
+              </div>
+              {/* Right content */}
+              <div className="bg-theme-bg-dark rounded-2xl overflow-hidden p-10">
+                <div className="h-full flex flex-col justify-between">
+                  {/* Top heading  */}
+                  <div className="flex justify-between items-center">
+                    <div className="flex gap-x-2 items-center">
+                      <span className="rounded p-1 bg-gray-800 text-white">
+                        <IoMdKey />
+                      </span>
+                      <span className="text-gray-600 tracking-wide font-theme-font">
+                        UNDER NDA
+                      </span>
+                    </div>
+                    <div className="text-gray-600 tracking-wide font-theme-font">
+                      SOCIAL MEDIA
+                    </div>
+                  </div>
+                  {/* center content */}
+                  <div>
+                    {" "}
+                    <h2 className="text-white text-2xl text-bold text-start tracking-wide font-theme-font mb-2">
+                      Social Media Screening Platform
+                    </h2>
+                    <p className="text-gray-600 text-start tracking-wide font-theme-font mb-2">
+                      The project is a web-based AI-powered platform for
+                      comprehensive social media background screening. Its
+                      supertask is to streamline potential employee background
+                      checks for companies, tackling employment risk management.
+                    </p>
+                  </div>
+                  {/* button  */}
+                  <div className="flex items-center justify-end gap-x-3 mt-5">
+                    <span className="text-gray-600  font-bold">
+                      View Case Study
+                    </span>
+                    <button className="p-3 text-lg  bg-purple-600 text-white rounded-3xl font-semibold hover:bg-white hover:text-purple-600 hover:shadow-md hover:shadow-purple-600 hover:shoadow-2xl transition-color delay-150">
+                      <HiOutlineArrowLongRight className="text-lg" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* project 2 */}
+            <div className="col-span-2 grid grid-cols-2 gap-2">
+              {/* left content */}
+              <div className="bg-theme-bg-dark rounded-2xl overflow-hidden p-10">
+                <div className="h-full flex flex-col justify-between">
+                  {/* Top heading  */}
+                  <div className="flex justify-between items-center">
+                    <div className="flex gap-x-2 items-center">
+                      <span className="rounded p-1 bg-gray-800 text-white">
+                        <IoMdKey />
+                      </span>
+                      <span className="text-gray-600 tracking-wide font-theme-font">
+                        UNDER NDA
+                      </span>
+                    </div>
+                    <div className="text-gray-600 tracking-wide font-theme-font">
+                      MEDTECH/MARTECH
+                    </div>
+                  </div>
+                  {/* center content */}
+                  <div>
+                    {" "}
+                    <h2 className="text-white text-2xl text-bold text-start tracking-wide font-theme-font mb-2">
+                      Bridging MedTech and MarTech for Enhanced Patient
+                      Engagement
+                    </h2>
+                    <p className="text-gray-600 text-start tracking-wide font-theme-font mb-2">
+                      Nabed is a SaaS platform at the crossroads of MedTech and
+                      MarTech. It enables caregivers to engage with patients
+                      using comprehensive, personalized educational content for
+                      better healthcare outcomes.
+                    </p>
+                  </div>
+                  {/* button  */}
+                  <div className="flex items-center justify-end gap-x-3 mt-5">
+                    <span className="text-gray-600  font-bold">
+                      View Case Study
+                    </span>
+                    <button className="p-3 text-lg  bg-purple-600 text-white rounded-3xl font-semibold hover:bg-white hover:text-purple-600 hover:shadow-md hover:shadow-purple-600 hover:shoadow-2xl transition-color delay-150">
+                      <HiOutlineArrowLongRight className="text-lg" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right content */}
+              <div className="h-96 relative rounded-2xl overflow-hidden">
+                <div className="absolute inset-0 bg-gray-100 opacity-0 hover:opacity-80 flex justify-center items-center">
+                  <Link
+                    href={""}
+                    class="text-lg font-semibold flex items-center gap-x-2"
+                  >
+                    <span className="text-xl">Click Here</span>
+                    <span>
+                      <FaArrowUpRightFromSquare />
+                    </span>
+                  </Link>
+                </div>
+                <img
+                  className="h-full w-full object-cover object-center"
+                  src="https://devoxsoftware.com/wp-content/uploads/2024/02/growtika-nGoCBxiaRO0-unsplash.webp"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </section>
       </Layout>
-    </div>
+    </main>
   );
 }
