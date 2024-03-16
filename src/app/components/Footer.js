@@ -10,7 +10,7 @@ import {
 
 function Footer() {
   return (
-    <nav className="bg-theme-bg-dark">
+    <footer className="bg-theme-bg-dark m-1 rounded-2xl">
       {/* Uppper Navbar  */}
       <div className="max-w-6xl m-auto py-20">
         <div className="grid grid-cols-3 py-2 px-10">
@@ -193,7 +193,7 @@ function Footer() {
           </div>
         </div>
       </div>
-    </nav>
+    </footer>
   );
 }
 
