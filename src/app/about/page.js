@@ -241,7 +241,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* Our Work Section  */}
+        {/* Contact Us Section  */}
         <section>
           <div className="relative max-w-6xl py-20 grid grid-cols-2 gap-2  m-auto">
             <span class="absolute font-semibold text-[12rem] font-theme-font leading-none opacity-10 top-[-25px] left-[-125px] text-gray-500">

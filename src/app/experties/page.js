@@ -16,6 +16,7 @@ import Link from "next/link.js";
 import ServicesBanner from "../components/servicesBanner.js";
 import AccordionCard from "../components/accordion.js";
 
+
 const data = [
   {
     _id: "0",
@@ -1329,7 +1330,219 @@ export default function page() {
           </div>
         </section>
 
-     
+        {/* Our CLients  */}
+        <section>
+          <div className="relative max-w-6xl py-20 grid grid-cols-2 gap-x-10  m-auto">
+            <span class="absolute font-semibold text-[8rem] font-theme-font tracking-wide leading-none opacity-10 top-0 left-[1/2] text-graye-500">
+              Clients
+            </span>
+            {/* heading  */}
+            <div className="col-span-2 flex flex-col ">
+              <div className="mb-2">
+                <h2 className="text-4xl text-gray-600 font-bold tracking-wide font-theme-font">
+                  Our
+                </h2>
+              </div>
+              <div className="mb-4">
+                <h1 className="text-5xl text-black font-bold tracking-wide font-theme-font">
+                  Clients
+                </h1>
+              </div>
+            </div>
+
+            <div className="col-span-2">
+              <ClientCard />
+            </div>
+          </div>
+        </section>
+
+        {/* testinomials section  */}
+        <section>
+          <div className="relative max-w-6xl py-20 grid grid-cols-2 gap-x-10 gap-y-10  m-auto">
+            <span class="absolute font-semibold text-[12rem] font-theme-font leading-none opacity-10 top-[-25px] left-[-125px] text-gray-500">
+              Testimonials
+            </span>
+            {/* heading  */}
+            <div className="col-span-2 flex flex-col ">
+              <div className="mb-2">
+                <h2 className="text-4xl text-gray-600 font-bold tracking-wide font-theme-font">
+                  Testimonials
+                </h2>
+              </div>
+              <div className="mb-4">
+                <h1 className="text-5xl text-black font-bold tracking-wide font-theme-font">
+                  Client
+                </h1>
+              </div>
+              <Testinomial />
+            </div>
+          </div>
+        </section>
+
+        {/* Faqs section  */}
+        <section className="">
+          <div className="relative max-w-6xl py-20 grid grid-cols-2 gap-x-10 gap-y-10  m-auto">
+            <span class="absolute font-semibold text-[8rem] font-theme-font leading-none opacity-10 top-[25px] left-[-125px] text-gray-500">
+              have a Doubt ?
+            </span>
+            {/* heading  */}
+            <div className="col-span-2 flex flex-col ">
+              <div className="mb-2">
+                <h2 className="text-4xl text-gray-600 font-bold tracking-wide font-theme-font">
+                  F.A.Q.
+                </h2>
+              </div>
+              <div className="mb-4">
+                <h1 className="text-5xl text-black font-bold tracking-wide font-theme-font">
+                  Our F.A.Q.
+                </h1>
+              </div>
+            </div>
+            {/* left content */}
+            <div className="col-span-2  gap-10">
+              {faqs.map((item, index) => (
+                <AccordionCard item={item} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Us Section  */}
+        <section>
+          <div className="relative max-w-6xl py-20 grid grid-cols-2 gap-2  m-auto">
+            <span class="absolute font-semibold text-[12rem] font-theme-font leading-none opacity-10 top-[-25px] left-[-125px] text-gray-500">
+              Latest Works
+            </span>
+            {/* heading  */}
+            <div className="col-span-2 flex flex-col ">
+              <div className="mb-2">
+                <h2 className="text-4xl text-gray-600 font-bold tracking-wide font-theme-font">
+                  Contact Us
+                </h2>
+              </div>
+              <div className="mb-4">
+                <h1 className="text-5xl text-black font-bold tracking-wide font-theme-font">
+                  Let's Talk
+                </h1>
+              </div>
+            </div>
+
+            <div className="col-span-2 h-screen grid grid-cols-2 gap-2">
+              {/* left content */}
+              <div className="h-full relative rounded-2xl overflow-hidden">
+                <div className="absolute inset-0 bg-gray-100 opacity-0 hover:opacity-80 flex justify-center items-center">
+                  <Link
+                    href={""}
+                    class="text-lg font-semibold flex items-center gap-x-2"
+                  >
+                    <span className="text-xl">Click Here</span>
+                    <span>
+                      <FaArrowUpRightFromSquare />
+                    </span>
+                  </Link>
+                </div>
+                <img
+                  className="h-full w-full object-cover object-center"
+                  src="https://devoxsoftware.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2024/02/philip-oroni-MyY188YX0vU-unsplash.jpg.webp"
+                  alt=""
+                />
+              </div>
+              {/* Right content */}
+              <div className="bg-theme-bg-dark rounded-2xl overflow-hidden p-10">
+                <div className="h-full flex flex-col justify-between">
+                  {/* Top heading  */}
+                  <div className="flex justify-between items-center mb-10">
+                    <div className="flex gap-x-2 items-center">
+                      <span className="rounded p-1 bg-gray-800 text-white">
+                        <IoMdKey />
+                      </span>
+                      <span className="text-gray-600 tracking-wide font-theme-font">
+                        UNDER NDA
+                      </span>
+                    </div>
+                    <div className="text-gray-600 tracking-wide font-theme-font">
+                      SOCIAL MEDIA
+                    </div>
+                  </div>
+                  {/* center content */}
+                  <div className="grow">
+                    {" "}
+                    <h2 className="text-white text-2xl font-semibold text-bold text-start tracking-wide font-theme-font mb-2">
+                      Got a Project in Mind? Let’s Talk!
+                    </h2>
+                    <p className="text-gray-600 text-start tracking-wide font-theme-font mb-2">
+                      Share the details of your project – like scope or business
+                      challenges. Our team will carefully study them and then
+                      we’ll figure out the next move together.
+                    </p>
+                    <form action="" className="flex flex-col gap-y-5">
+                      {/* full name  */}
+                      <div>
+                        <input
+                          placeholder="Your full Name*"
+                          className="w-full text-gray-600 outline-none border-0 font-theme-font bg-theme-bg-dark
+                          border-b border-gray-600 py-2"
+                          type="text"
+                          id="customInput"
+                        />
+                      </div>
+                      {/* phone Number  */}
+                      <div>
+                        <input
+                          placeholder="Your Phone number*"
+                          className="w-full text-gray-600 outline-none border-0 font-theme-font bg-theme-bg-dark
+                          border-b border-gray-600 py-2"
+                          type="text"
+                          id="customInput"
+                        />
+                      </div>
+                      {/* coperate email */}
+                      <div>
+                        <input
+                          placeholder="Corporate email*"
+                          className="w-full text-gray-600 outline-none border-0 font-theme-font bg-theme-bg-dark
+                          border-b border-gray-600 py-2"
+                          type="text"
+                          id="customInput"
+                        />
+                      </div>
+                      {/* about your project  */}
+                      <div>
+                        <input
+                          placeholder="About your Project*"
+                          className="w-full text-gray-600 outline-none border-0 font-theme-font bg-theme-bg-dark
+                          border-b border-gray-600 py-2"
+                          type="text"
+                          id="customInput"
+                        />
+                      </div>
+                    </form>
+                  </div>
+                  {/* button  */}
+                  <div className="flex items-center justify-between gap-x-20 mt-5">
+                    <div>
+                      <p className="text-white text-xs">
+                        By sending this form I confirm that I have read and
+                        accept the{" "}
+                        <span className="underline hover:no-underline text-white">
+                          Privacy Policy
+                        </span>
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-x-2">
+                      <span className="text-gray-600 text-nowrap font-bold">
+                        View Case Study
+                      </span>
+                      <button className="p-3 text-lg  bg-purple-600 text-white rounded-3xl font-semibold hover:bg-white hover:text-purple-600 hover:shadow-md hover:shadow-purple-600 hover:shoadow-2xl transition-color delay-150">
+                        <HiOutlineArrowLongRight className="text-lg" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </Layout>
     </main>
   );

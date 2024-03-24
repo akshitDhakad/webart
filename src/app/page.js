@@ -628,7 +628,7 @@ export default function Home() {
         {/* Our CLients  */}
         <section>
           <div className="relative max-w-6xl py-20 grid grid-cols-2 gap-x-10  m-auto">
-            <span class="absolute font-semibold text-[12rem] font-theme-font tracking-wide leading-none opacity-10 top-0 left-[1/2] text-graye-500">
+            <span class="absolute font-semibold text-[10rem] font-theme-font tracking-wide leading-none opacity-10 top-0 left-[1/2] text-graye-500">
               Clients
             </span>
             {/* heading  */}
