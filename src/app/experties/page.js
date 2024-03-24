@@ -1380,7 +1380,7 @@ export default function page() {
         </section>
 
         {/* Faqs section  */}
-        <section className="">
+        <section className="bg-gray-100">
           <div className="relative max-w-6xl py-20 grid grid-cols-2 gap-x-10 gap-y-10  m-auto">
             <span class="absolute font-semibold text-[8rem] font-theme-font leading-none opacity-10 top-[25px] left-[-125px] text-gray-500">
               have a Doubt ?
