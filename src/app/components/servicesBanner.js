@@ -2,7 +2,7 @@ import React from "react";
 import { TiArrowRight } from "react-icons/ti";
 import { RiRadioButtonFill } from "react-icons/ri";
 
-function ServicesBanner() {
+function ServicesBanner({title,description}) {
   
   const backgroundImageStyle = {
     backgroundImage:
@@ -26,9 +26,7 @@ function ServicesBanner() {
       <div className="h-full w-full p-10">
         {/* heading  */}
         <div className="pb-8">
-          <p className="font-bold text-white font-theme-font">
-            Type of We Solution We Build
-          </p>
+          <p className="font-bold text-white font-theme-font">{title}</p>
         </div>
         <hr />
         {/* content  */}
@@ -48,7 +46,7 @@ function ServicesBanner() {
           </div>
           <div className="py-5">
             <h2 className="text-6xl text-white font-bold font-theme-font">
-              Content management systems
+              {description}
             </h2>
           </div>
         </div>

@@ -380,7 +380,6 @@ export default function About() {
 
         {/* Technologies we use  */}
         {/* Our Development Process  */}
-
         <section>
           <div className="relative max-w-6xl py-20 grid grid-cols-2 gap-x-10 gap-y-10  m-auto">
             <span class="absolute font-semibold text-[12rem] font-theme-font leading-none opacity-10 top-[-25px] left-0 text-gray-500">
